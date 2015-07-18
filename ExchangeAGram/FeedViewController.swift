@@ -39,7 +39,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         // if Camera is available
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
             var cameraController = UIImagePickerController()
-            cameraController.delegate = selfx
+            cameraController.delegate = self
             cameraController.sourceType = UIImagePickerControllerSourceType.Camera
             
             let mediaTypes: [AnyObject] = [kUTTypeImage]
@@ -58,7 +58,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
             photoLibraryController.mediaTypes = mediaTypes
             photoLibraryController.allowsEditing = false
             self.presentViewController(photoLibraryController, animated: true, completion: nil)
-        // show alert is neither is available
+        // show alert if neither is available
         } else {
             // present an alert pop up
             var alertController = UIAlertController(title: "Alert", message: "Your device does not support the camera or Photo Library.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -86,8 +86,9 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         feedItem.caption = "Test Caption"
         
         (UIApplication.sharedApplication().delegate as! AppDelegate).saveContext()
-        
+        feedArray.append(feedItem)
         self.dismissViewControllerAnimated(true, completion: nil)
+        self.collectionView.reloadData()
     }
     
     
@@ -100,32 +101,30 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return feedArray.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        
+        var cell: FeedCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! FeedCell
+        
+        let thisItem = feedArray[indexPath.row] as! FeedItem
+        cell.imageView.image = UIImage(data: thisItem.image)
+        cell.captionLabel.text = thisItem.caption
+        return cell
     }
     
     // --------------------------------------------
     // UICollectionViewDelegate
     // --------------------------------------------
-    
-    
-    
-    
-    
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+ 
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let thisItem = feedArray[indexPath.row] as! FeedItem
+        
+        // create an instance on FilterViewController
+        var filterVC = FilterViewController()
+        filterVC.thisFeedItem = thisItem
+        self.navigationController?.pushViewController(filterVC, animated: false)
     }
-    */
-
 }

@@ -10,13 +10,15 @@
 		487FC4811B58864000C76E46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487FC4801B58864000C76E46 /* AppDelegate.swift */; };
 		487FC4841B58864000C76E46 /* ExchangeAGram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 487FC4821B58864000C76E46 /* ExchangeAGram.xcdatamodeld */; };
 		487FC4891B58864000C76E46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 487FC4871B58864000C76E46 /* Main.storyboard */; };
-		487FC48B1B58864000C76E46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 487FC48A1B58864000C76E46 /* Images.xcassets */; };
 		487FC48E1B58864000C76E46 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 487FC48C1B58864000C76E46 /* LaunchScreen.xib */; };
 		487FC49A1B58864100C76E46 /* ExchangeAGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487FC4991B58864100C76E46 /* ExchangeAGramTests.swift */; };
 		487FC4A41B58889E00C76E46 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487FC4A31B58889E00C76E46 /* FeedViewController.swift */; };
 		487FC4A61B588FCD00C76E46 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487FC4A51B588FCD00C76E46 /* FeedCell.swift */; };
 		48D5FCFD1B58921700B7D7F4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D5FCFC1B58921700B7D7F4 /* MobileCoreServices.framework */; };
 		48D5FCFF1B58989100B7D7F4 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5FCFE1B58989100B7D7F4 /* FeedItem.swift */; };
+		48D5FD011B59D97D00B7D7F4 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5FD001B59D97D00B7D7F4 /* FilterViewController.swift */; };
+		48D5FD031B59DEE700B7D7F4 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5FD021B59DEE700B7D7F4 /* FilterCell.swift */; };
+		48D5FD071B59E4AB00B7D7F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48D5FD061B59E4AB00B7D7F4 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,6 @@
 		487FC4801B58864000C76E46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		487FC4831B58864000C76E46 /* ExchangeAGram.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExchangeAGram.xcdatamodel; sourceTree = "<group>"; };
 		487FC4881B58864000C76E46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		487FC48A1B58864000C76E46 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		487FC48D1B58864000C76E46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		487FC4931B58864100C76E46 /* ExchangeAGramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeAGramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		487FC4981B58864100C76E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +45,9 @@
 		487FC4A51B588FCD00C76E46 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		48D5FCFC1B58921700B7D7F4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		48D5FCFE1B58989100B7D7F4 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		48D5FD001B59D97D00B7D7F4 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		48D5FD021B59DEE700B7D7F4 /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		48D5FD061B59E4AB00B7D7F4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,11 +93,13 @@
 			children = (
 				487FC4801B58864000C76E46 /* AppDelegate.swift */,
 				487FC4A31B58889E00C76E46 /* FeedViewController.swift */,
+				48D5FD001B59D97D00B7D7F4 /* FilterViewController.swift */,
 				487FC4A51B588FCD00C76E46 /* FeedCell.swift */,
+				48D5FD021B59DEE700B7D7F4 /* FilterCell.swift */,
 				487FC4871B58864000C76E46 /* Main.storyboard */,
-				487FC48A1B58864000C76E46 /* Images.xcassets */,
 				487FC48C1B58864000C76E46 /* LaunchScreen.xib */,
 				487FC4821B58864000C76E46 /* ExchangeAGram.xcdatamodeld */,
+				48D5FD061B59E4AB00B7D7F4 /* Images.xcassets */,
 				48D5FCFE1B58989100B7D7F4 /* FeedItem.swift */,
 				487FC47E1B58864000C76E46 /* Supporting Files */,
 			);
@@ -205,9 +211,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D5FD071B59E4AB00B7D7F4 /* Images.xcassets in Resources */,
 				487FC4891B58864000C76E46 /* Main.storyboard in Resources */,
 				487FC48E1B58864000C76E46 /* LaunchScreen.xib in Resources */,
-				487FC48B1B58864000C76E46 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +231,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D5FD031B59DEE700B7D7F4 /* FilterCell.swift in Sources */,
+				48D5FD011B59D97D00B7D7F4 /* FilterViewController.swift in Sources */,
 				487FC4811B58864000C76E46 /* AppDelegate.swift in Sources */,
 				487FC4A61B588FCD00C76E46 /* FeedCell.swift in Sources */,
 				487FC4A41B58889E00C76E46 /* FeedViewController.swift in Sources */,
